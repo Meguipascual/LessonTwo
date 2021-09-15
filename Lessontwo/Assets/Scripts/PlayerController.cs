@@ -36,7 +36,10 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(Vector3.right * Time.deltaTime * horizontalInput * speed);
 
-
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        { 
+            // launch a piece of food
+        }
 
     }
 }
