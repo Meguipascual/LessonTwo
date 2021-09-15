@@ -17,7 +17,21 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
+
+
+        if (transform.position.x < -10)
+        {
+            transform.position = new Vector3(-10, transform.position.y, transform.position.z);
+        }//else if (transform.position.x > 10)
+        //{
+        //    transform.position = new Vector3(10, transform.position.y, transform.position.z);
+       // }
+
+
+
         transform.Translate(Vector3.right * Time.deltaTime * horizontalInput * speed);
-        
+
+
+
     }
 }
